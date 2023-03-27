@@ -1,0 +1,163 @@
+.signing-form, .l2-form {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+
+
+.signing-field {
+    width: 70%;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid #ffc000;
+    color: #5f6368;
+    padding: 1em 1em;
+    font-size: 100%;
+    transition: 0.5s;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+.l2-field {
+    width: 80%;
+    padding: 1em 1em;
+    background-color: transparent;
+    border: 1px solid #ffc000;
+    color: #5f6368;
+    font-size: 110%;
+    transition: 0.5s;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+
+usernamefieldmessage, passwordfieldmessage, showpasswordfield, agreementmessage, emailfieldmessage, fullnamefieldmessage, nicknamefieldmessage, birthdayfieldmessage, genderfieldmessage {
+    display: block; width: 95%; margin-left: auto; margin-right: auto;
+}
+
+usernamefield, passwordfield, agreementfield, submissionfield, emailfield, fullnamefield, nicknamefield, birthdayfield, genderfield, previewfield, sexualfield, statusfield, phonenumberfield {
+    text-align: left; width: 95%; display: block;
+    margin-left: auto; margin-right: auto;
+    margin-top: 2em; margin-bottom: 2em;
+    overflow-x: hidden; overflow-y: hidden;
+    transition: 1s;
+    max-height: 1000px;
+}
+
+
+
+
+errormessage {
+    display: block;
+    padding: 0.5em;
+    color: red;
+    font-weight: bold;
+    font-size: 110%;
+}
+
+.preview {
+ margin-top: 1em; margin-bottom: 1em;
+}
+
+.preview > div {
+    margin: 1em;
+    text-align: center;
+}
+
+.navigations {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: 48px;
+}
+
+.navigations > div {
+    color: #ffc000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navigations > div > p {
+    color: #ffc000;
+    cursor: pointer;
+    transition: 0.5s;
+    font-size: 110%;
+}
+
+.navigations > div > p:hover {
+    text-decoration: dotted underline;
+}
+
+.disabled {
+    color: rgba(0,0,0,0.1);
+    cursor: not-allowed;
+}
+
+.signing-button, .l2-button {
+    background-color: transparent;
+    border-radius: 100px;
+    padding: 1em 4em;
+    font-size: 120%;
+    cursor: pointer;
+    border: 2px solid #ffc000;
+    transition: 0.5s;
+    color: #ffc000;
+    font-weight: bold;
+}
+
+.signing-button:hover, .l2-button:hover {
+    padding: 1em 6em;
+}
+
+.fullname-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.firstname, .lastname {
+    margin: 1em;
+}
+
+.sigunp-loader {
+    transition: 2s;
+    -webkit-transition: 2s;
+    animation: spin 2s linear infinite;
+    -webkit-animation: spin 2s linear infinite;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border : 10px solid rgba(0,0,0,0.1);
+    border-top: 10px solid #ffc000;
+}
+
+@media only screen and (max-width: 640px) {
+    .signing-form {
+        width: 80%;
+    }
+
+    .l2-form {
+        width: 90%;
+    }
+
+    .signing-field {
+        width: 80%;
+    }
+
+    .fullname-container {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    
+}
+

@@ -1,0 +1,54 @@
+header {
+    width: 100%;
+    margin-bottom: 4em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    position: fixed;
+    top: 0%;
+    background-color: white;
+    z-index: 6969;
+}
+
+header > div {
+    display: grid;
+    grid-template-columns: 5fr 1fr 3fr;
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.date-time {
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+}
+
+
+.header {
+    width: 90%;
+}
+
+
+.header-logo {
+    width: 200px;
+    cursor: pointer;
+}
+
+
+.full-screen {
+    height: 100%;
+    position: absolute;
+    top: 0%;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 100;
+}
+
+
+@media only screen and (max-width:832px) {
+    .header-logo {
+        width: 120px;
+    }
+}

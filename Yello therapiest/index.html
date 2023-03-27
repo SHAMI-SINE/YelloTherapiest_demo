@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>The Yellow Therapist</title>
+
+
+    
+    <link rel="stylesheet" href="/css/basev1.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/signing.css">
+    <link rel="shortcut icon" href="https://images.theyellowtherapist.com/logos/icon_y.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    <script src="https://kit.fontawesome.com/02c6faad26.js" crossorigin="anonymous"></script>
+    <style>
+        html,body {
+            font-weight: normal;
+            scroll-behavior: smooth;
+        }
+        .vent, .rumuna {
+        position: fixed;
+        right: 2%;
+        top: 80%;
+        width: fit-content;
+        border-radius: 69px;
+        background-color: rgba(255,255,255,0.7);
+        box-shadow: 0 1px 4px grey;
+        cursor: pointer;
+        transition: 0.5s;
+        color: #ffc000;
+        text-align: center;
+        padding: 1em;
+        font-size: 120%;
+    }
+
+    .rumuna {
+        top: 70%;
+    }
+    .vent-color {
+        color: #ffc000;
+        vertical-align: middle;
+    }
+    .vent-color:hover {
+        color: white;
+    }
+    .vent:hover {
+        background-color: #ffc000;
+        color: white;
+    }
+    .break {
+        display:none;
+    }
+    
+
+        @media only screen and (max-width:450px) {
+    .break {
+        display: inline;
+    }
+}
+        @-webkit-keyframes spin {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(720deg); }
+        }
+        * {
+            font-family: "Trebuchet MS";
+        }
+        </style>
+</head>
+
+<body onscroll="pagexoffset()">
+    <div id="rumuna" style="z-index: 110;" class="rumuna" onclick="rumuna()">RUMUNA</div>
+    <div id="vent" style="z-index: 110;" class="vent" onclick="vent()">TYT Vent</div>
+    
+    
+
+    <header id="header">
+        <div class="header">
+
+            <div>
+                <br>
+                
+                <a href="/"><img class="header-logo" src="https://images.theyellowtherapist.com/logos/new_tyt_logo_kinda_yellow.png" alt="The Yellow Therapist"></a><br>
+                <small style="color: #ffc000;">Because yellow is the happiest color.</small>
+                
+            </div>
+
+            <div></div>
+
+
+            <div class="date-time">
+                <div style="text-align: center;">
+                    <small onchange="apnts_reload()" id="clock"></small><br>
+                <small id="date" style='border-bottom:1px solid rgba(0,0,0,0.1); margin-bottom:0.5em;'></small><br>
+                
+                <small style='margin-top:0.5em'>Guest User</small>
+                
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+
+   
+   
+   
+<main>
+<head>
+    
+    <style>
+        
+        .banner-pc {
+            display: block;
+        }
+        .banner-phone {
+            display: none;
+        }
+        @media only screen and (max-width:720px) {
+            .banner-pc {
+                display: none;
+            }
+            .banner-phone {
+                display: block;
+            }
+            .landing-words {
+            font-size: 150%;
+            word-spacing: 2px;
+        }
+        }
+    </style>
+</head>
+
+
+    <div class="banner-pc">
+        <img style='width:100%; height: 100%;border:1px solid #ffc000' src='https://images.theyellowtherapist.com/banners/tytforstudents2.png'>
+    </div>
+   
+
+    
+
+        <div style=" padding-top: 1em; padding-bottom: 1em;margin-bottom: 2em; margin-top: 2em;">
+            <div class="option-buttons" style="margin-top: 2em;margin-bottom: 2em;">
+                <h1 style="color: #5f6368; ">What are you looking for?</h1>
+
+                <div>
+                    <Style>
+                        .button {
+                            background-color:  #ffc000;; 
+                            border: none;
+                            color: white;
+                            padding: 16px 32px;
+                            text-align: center;
+                            text-decoration: none;
+                            display: inline-block;
+                            font-size: 16px;
+                            margin: 4px 2px;
+                            transition-duration: 0.4s;
+                            cursor: pointer;
+                          }
+                          
+                          .button1 {
+                            background-color: white; 
+                            color: black; 
+                            border-radius: 8px;
+                            border: 2px solid  #ffc000;;
+                          }
+                          .button1:hover {
+                            background-color: #ffc000;;
+                            color: white;
+                          }
+                    </Style>
+                    <button class="button button1">I need a therapist</button>
+                    &nbsp;<span class="break"><br></span> <b>Or,</b> &nbsp; <span class="break"><br></span>
+                    <button class="button button1">I am a therapist</button>
+
+
+                </div>
+                
+
+               
+            </div>
+
+           
+        </div>
+
+
+    
+
+
+
+
+    <div style=" padding-top: 1em; padding-bottom: 1em;margin-bottom: 2em; margin-top: 2em; width:69%; margin-left:auto; margin-right:auto;" class="big">
+        <div class="who">
+            <div style='text-align:center; margin-bottom:2em;'>
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+                <lottie-player src="https://assets8.lottiefiles.com/packages/lf20_btydlivb.json"  background="transparent"  speed="1"  style="width: auto; height: 200px;"  loop  autoplay></lottie-player>
+            </div>
+            <div style=' margin-bottom:2em;'>
+                <h1 style="color: #ffc000;">A bridge between...</h1>
+                <p>
+                    A platform serving both of who seeks professional help for their mental well being and the professional therapists who are always ready to help. 
+                    We're providing a smooth bridge between these two.
+                </p>
+            </div>        
+
+            <div style=' margin-bottom:2em;'>
+                <h1 style="color:#ffc000">those who need help...</h1>
+                <p>
+                    Something ails? Hey, seeking help is the most humane thing we can do. It's not always easy on our own. 
+                    This is the place where you get the proper help you need.
+                </p>
+            </div>
+
+            <div style='text-align:center; margin-bottom:2em;'>
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_ooqij0vt.json" mode="bounce" background="transparent"  speed="1"  style="width: auto; height: 200px;"  loop  autoplay></lottie-player>                    </div>
+            
+            <div style='text-align: center; margin-bottom:2em;'>
+                <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets5.lottiefiles.com/packages/lf20_zly3nrlb.json" mode="bounce" background="transparent"  speed="1"  style="width: auto; height: 200px;"  loop  autoplay></lottie-player>
+            </div>
+            <div style=' margin-bottom:2em;'>
+                <h1 style="color:#ffc000">and those who can provide.</h1>
+                <p>
+                    Are you a professional therapist? We're providing a structured platform to reach out to those who need your help. 
+                    An independant platform to work on your own schedule and demand.
+                </p>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    
+
+
+
+
+        </div>
+
+    </div>
+    <div style='width:95%; margin-left:auto;margin-right:auto; text-align:center'>
+        <h2>Secure and easy payment with wide range of checkout choices</h2>
+        <div>
+            <img style='width:100%' src='https://images.theyellowtherapist.com/logos/FOOTER-02.png' alt='Payment gateways'>
+        </div>
+    </div>
+    <div id="about" style="padding-bottom: 0.5em; border-top: 1px solid rgba(0,0,0,0.1);"><br><br><br><br></div>
+
+    <div id="tyt-about" style=" padding-top: 1em; padding-bottom: 1em; margin-bottom: 0; margin-top: 2em; transition: 5s; box-shadow: 0 1px 4px grey; background-color: rgba(0,0,0,0.1);">
+        <div class="who" style="display: block;">
+            <div>
+                <h1 style="color:#ffc000">About TYT</h1>
+                <p class="landing-words">
+                    The Yellow Therapist is an integrated platform that aspires to uplift the existing state of mental health services of Bangladesh. 
+                    Removing as many obstacles as possible between the one who needs help and the one who can provide- is what we are striving for. 
+                    In our platform, the therapists and the ones who need the therapy can easily get in touch with each other. At the end of the day, 
+                    it's the connection that will bring positive outcomes. We are relentlessly working for a better tomorrow where no soul suffers, 
+                    where every heart is at peace.
+                </p>
+            </div>
+            <div>
+            
+        </div>
+        </div>
+
+    </div>
+
+    <div style=" padding-top: 1em; padding-bottom: 1em; margin-bottom: 0; margin-top: 0;">
+        <div class="who" style="display: block;">
+            <h1 style="color: #ffc000;">Questions maybe circling in your mind:</h1>
+            <div id="questions">
+                <ul>
+                    
+                        <li>
+                            <div style="margin-top: 3em; margin-bottom: 3em;">
+                                <a  class="landing-words" style="color: black; cursor: pointer; text-decoration: underline;" onclick="expand_answer(this.parentElement)">Yellow therapist reminds me of yellow journalists, why yellow?</a>
+                                <div style="max-height: 0px; overflow-y: hidden;">
+                                    <small class="landing-words"><p>As you could guess, we get that a lot. But we chose yellow because yellow is famously the happiest color, yellow is the symbol of happiness. So the therapists work here are yellow therapists in the best possible way, far from yellow journalists. So, no worries. Let&#39;s spread happiness. &nbsp;</p></small>
+                                </div>
+                            </div>
+                        </li>
+                    
+                        <li>
+                            <div style="margin-top: 3em; margin-bottom: 3em;">
+                                <a  class="landing-words" style="color: black; cursor: pointer; text-decoration: underline;" onclick="expand_answer(this.parentElement)">This web design makes me sad, why is it so dull? Or, I don&#x27;t like the design. Or, did you not pay your web designer?</a>
+                                <div style="max-height: 0px; overflow-y: hidden;">
+                                    <small class="landing-words"><p>We are really sorry that you felt that way. But to assure you, this is not our final design. We tend to bring the platform to the public as fast as possible, so we had no choice but to find perfection in the imperfect, just for now. And we are working relentlessly to make the platform better and better. Thanks for being with us.</p></small>
+                                </div>
+                            </div>
+                        </li>
+                    
+                        <li>
+                            <div style="margin-top: 3em; margin-bottom: 3em;">
+                                <a  class="landing-words" style="color: black; cursor: pointer; text-decoration: underline;" onclick="expand_answer(this.parentElement)">Wait a minute, who are you people?</a>
+                                <div style="max-height: 0px; overflow-y: hidden;">
+                                    <small class="landing-words"><p><a href="http://asd">click here.</a></p>
+
+<div><img src="https://images.theyellowtherapist.com/gifs/who_are_you.gif" style="display:block; width:220px" />
+<div>&nbsp;</div>
+</div></small>
+                                </div>
+                            </div>
+                        </li>
+                    
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        const expand_answer = (el) => {
+           let d = el.getElementsByTagName('div')[0]
+           if (d.style.maxHeight!='1000px') {
+               d.style.maxHeight='1000px'
+           } else {
+               d.style.maxHeight='0px'
+           }
+        }
+
+        let remove_shadow=(id)=> {
+            document.getElementById(id).style.boxShadow='0 0 0 transparent'
+            document.getElementById(id).style.backgroundColor='transparent'
+        }
+        remove_shadow('tyt-about')
+    </script>
+
+
+        
+        
+        
+        
+        
+    </main><br><br><br><br>
+    
+    
+    <!--footer menu-->
+    <footer  style="font-size: 110%;">
+        
+
+
+                <div id="menu" class="outside">
+
+                    <div>
+                        <a href="/therapists">
+                            <span class="material-icons">group</span><br>
+                            <small>Therapists</small>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="/login">
+                            <span class="material-icons">login</span><br>
+                            <small>Login</small>
+                        </a>
+                    </div>
+    
+    
+                    <div>
+                        <a href="/signup">
+                            <span class="material-icons">person_add</span><br>
+                            <small>Signup</small>
+                        </a>
+                    </div>
+    
+                    
+                    <!--4th, this ones reserved for phone view-->
+                    <div>
+                        <a style="cursor: pointer;" onclick="expand_menu()">
+                            <span id="expand-icon" class="material-icons">expand_less</span><br>
+                            <small id="expand-text">Full Menu</small>
+                        </a>
+                    </div>
+                    
+                    <div>
+                        <a href="/#about">
+                            <img src="https://images.theyellowtherapist.com/logos/logo_y.png" style="width:12px;height:24px;"><br>
+                            <small>About TYT</small>
+                        </a>
+                    </div>
+
+                    <div>
+                        <a href="/tytfs">
+                            <span class="material-icons">school</span><br>
+                            <small>TYTFS</small>
+                        </a>
+                    </div>
+    
+                    
+                    
+                    
+    
+                    
+                    <div>
+                        <a href="/contact">
+                            <span class="material-icons">contact_support</span><br>
+                            <small>Contact</small>
+                        </a>
+                    </div>
+                    <div>
+                    <a href="/terms-of-uses#terms">
+                        <span class="material-icons">article</span><br>
+                        <small>Terms and Conditions</small>
+                    </a>
+                </div>
+                <div>
+                    <a href="/terms-of-uses#privacy">
+                        <span class="material-icons">admin_panel_settings</span><br>
+                        <small>Privacy Policy</small>
+                    </a>
+                </div>
+            </div>
+        
+        <div id="footer" style="padding-top: 0.5em; padding-bottom:0.5em; text-align:center; display: none; color: rgba(0,0,0,0.3);">
+            <p><span class="fa fa-copyright"></span> The Yellow Therapist &nbsp;|&nbsp; All rights reserved</p>
+            <p><a style="color: rgba(0,0,0,0.3);" href="/terms-of-uses#terms">Terms and Conditions</a> &nbsp;|&nbsp; <a style="color: rgba(0,0,0,0.3);" href="/terms-of-uses#privacy">Privacy Policy</a> &nbsp;|&nbsp; <a style="color: rgba(0,0,0,0.3);" href="/contact">Contact us</a></p>
+        </div>
+        </footer>
+
+
+
+    
+    <!--javaScripts-->    
+    <script>
+        let pagexoffset = () => {
+            if (document.documentElement.scrollTop>(document.documentElement.scrollHeight-document.documentElement.clientHeight-90)) {
+                document.getElementById('menu').style.display='none'
+                document.getElementById('footer').style.display='block'
+            } else {
+                document.getElementById('menu').style.display=''
+                document.getElementById('footer').style.display='none'
+            }    
+        }
+        function startTime() {
+            const today = new Date();
+            let h = today.getHours();
+            let m = today.getMinutes();
+            let s = today.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById('clock').innerHTML =  h + ":" + m + ":" + s;
+            setTimeout(startTime, 1000);
+        }       
+
+            function checkTime(i) {
+              if (i < 10) {i = "0" + i}; 
+              return i;
+            }
+            const d = new Date();
+            let dd = d.toString()
+            let dl = dd.split(' ')
+            let day = dl[0]
+            let mon = dl[1]
+            let dt = dl[2]
+            let yr = dl[3]
+            let date = day+', '+dt+' '+mon+', '+yr
+            document.getElementById('date').innerText = date
+
+            startTime()
+            const expand_menu = () => {
+                const menu = document.getElementById('menu')
+                const expand_icon = document.getElementById('expand-icon')
+                const expand_text = document.getElementById('expand-text')
+                if (menu.style.maxHeight!='10000px') {
+                    expand_icon.innerText='expand_more'
+                    expand_text.innerText='Hide Menu'
+                    menu.style.maxHeight='10000px'
+                } else {
+                    expand_icon.innerText='expand_less'
+                    expand_text.innerText='Full Menu'
+                    menu.style.maxHeight='50px'
+                }
+            }
+
+    </script>
+    
+</body>
+
+</html>

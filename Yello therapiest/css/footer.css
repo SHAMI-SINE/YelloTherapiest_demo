@@ -1,0 +1,83 @@
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    left: 0%;
+    padding-top: 0.2em;
+    padding-bottom: 0.5em;
+    background-color: white;
+    z-index: 6969;
+}
+
+.outside, .inside {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    display: grid;
+    transition: 0.5s;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+.outside > div {
+    text-align: center;
+    margin-top: 0.2em;
+    margin-bottom:1em;
+}
+
+.outside > div > a {
+    color: #ffc000;
+    font-size: 110%;
+    background-color: transparent;
+}
+.inside > div {
+    text-align: center;
+    margin-top: 0.2em;
+    margin-bottom:1em;
+}
+
+.inside > div > a {
+    color: #ffc000;
+    font-size: 110%;
+    background-color: transparent;
+}
+
+.outside > div > button {
+    color: #ffc000;
+    font-size: 100%;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    font-weight: bold;
+}
+
+
+.phone {
+    display: none;
+}
+
+
+#menu {
+    max-height: 50px;
+}
+
+#menu > div > a {
+    font-weight: bold;
+}
+
+
+@media only screen and (max-width:832px) {
+    .outside, .inside {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .phone {
+        display: block;
+    }
+
+    .outside, .inside {
+        width: 95%;
+    }
+
+}
+
